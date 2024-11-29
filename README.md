@@ -40,14 +40,55 @@ Cooking Up! is a Flutter-based mobile application designed to help users explore
 
 ## 📂 Project Structure
 
-```plaintext
+
+## **lib/**
+
+```
 lib/
-├── models/        # Data models for categories, filters, and meals
-├── screens/       # Screen widgets (Categories, Filters, Favorites)
-├── widgets/       # Reusable widgets
-└── main.dart      # Application entry point
+├── models/               # Folder containing data models.
+│   ├── category.dart     # Category model: Defines properties like id and title for categories.
+│   ├── meal.dart         # Meal model: Includes properties of meals (name, duration, ingredients).
+│   └── filters.dart      # Filter model: Defines filters selected by the user.
+│
+├── screens/              # Folder containing the app's screens.
+│   ├── categories_screen.dart  # Main screen listing all categories.
+│   ├── favorites_screen.dart   # Screen showing favorite meals.
+│   ├── filters_screen.dart     # Screen where users can apply filters.
+│   └── meal_detail_screen.dart # Screen displaying details of a selected meal.
+│
+├── widgets/              # Folder for reusable custom widgets.
+│   ├── category_item.dart       # Widget designing the category tiles.
+│   ├── meal_item.dart           # Widget listing meals.
+│   └── main_drawer.dart         # Navigation menu for the app.
+│
+├── utils/                # Utility functions or general settings.
+│   └── app_colors.dart         # Defines the app's color palette.
+│
+└── main.dart             # Entry point of the application.
 ```
 
+---
+
+### **Detailed Explanations**
+
+#### **1. models/**
+- **category.dart**: Contains properties like id and title for categories.
+- **meal.dart**: Includes meal properties (name, description, duration, difficulty, etc.).
+- **filters.dart**: Stores filter settings defined by the user (e.g., dietary preferences).
+
+#### **2. screens/**
+- **categories_screen.dart**: Displays all categories in a grid view format.
+- **favorites_screen.dart**: Displays the user's favorite meals.
+- **filters_screen.dart**: Allows users to filter meals based on dietary preferences.
+- **meal_detail_screen.dart**: Shows details of a selected meal (ingredients, steps, etc.).
+
+#### **3. widgets/**
+- **category_item.dart**: Creates category tiles. Clicking on a tile navigates to the relevant meal screen.
+- **meal_item.dart**: Lists meals and navigates to the detail screen when clicked.
+- **main_drawer.dart**: Side menu (drawer) component for navigating between screens.
+
+#### **4. utils/**
+- **app_colors.dart**: Defines the color palette used throughout the app (e.g., `primaryColor`, `accentColor`).
 ---
 
 ## 🖥️ Getting Started
